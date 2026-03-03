@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formularios</title>
+  <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Blog de Etiquetas HTML</h1>
+    <p>Aprende las etiquetas más importantes organizadas por categorías</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="estructurales.html">Estructurales</a>
+    <a href="texto.html">Texto</a>
+    <a href="listas.html">Listas</a>
+    <a href="formularios.html">Formularios</a>
+    <a href="tablas.html">Tablas</a>
+    <a href="multimedia.html">Multimedia</a>
+  </nav>
+
+  <main>
+
+    <aside>
+      <h3> En esta página</h3>
+      <p>Aprenderás las etiquetas para capturar datos del usuario y verás un formulario funcional con todos los tipos de input.</p>
+    </aside>
+
+    <section>
+      <h2> Formularios</h2>
+      <p>Los formularios permiten al usuario enviar información, como en un registro o un formulario de contacto.</p>
+
+      <article>
+        <h4>Etiquetas del formulario</h4>
+        <ul>
+          <li><strong>&lt;form&gt;</strong>: contenedor de todo el formulario.</li>
+          <li><strong>&lt;fieldset&gt;</strong>: agrupa campos relacionados con un borde visual.</li>
+          <li><strong>&lt;legend&gt;</strong>: título del fieldset.</li>
+          <li><strong>&lt;label&gt;</strong>: texto que describe un campo. Debe ir siempre con su input.</li>
+          <li><strong>&lt;input&gt;</strong>: campo de entrada. Cambia según el atributo <em>type</em>.</li>
+          <li><strong>&lt;textarea&gt;</strong>: área de texto para mensajes largos.</li>
+          <li><strong>&lt;select&gt;</strong> y <strong>&lt;option&gt;</strong>: lista desplegable de opciones.</li>
+          <li><strong>&lt;button&gt;</strong>: botón de acción.</li>
+        </ul>
+        <div class="tip"><strong> Buena práctica:</strong> Siempre enlaza &lt;label&gt; con su campo usando <em>for</em> e <em>id</em> con el mismo valor. Esto mejora la accesibilidad.</div>
+      </article>
+
+      <article>
+        <h4>Tipos de &lt;input&gt;</h4>
+        <ul>
+          <li><strong>text</strong>: texto libre.</li>
+          <li><strong>email</strong>: valida que sea un correo con @.</li>
+          <li><strong>password</strong>: oculta los caracteres.</li>
+          <li><strong>number</strong>: solo números.</li>
+          <li><strong>date</strong>: selector de fecha.</li>
+          <li><strong>radio</strong>: elige una opción entre varias.</li>
+          <li><strong>checkbox</strong>: elige una o varias opciones.</li>
+          <li><strong>file</strong>: permite subir un archivo.</li>
+          <li><strong>submit</strong>: botón para enviar el formulario.</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <section>
+      <h2>Formulario de registro — ejemplo funcional</h2>
+
+      <form id="miFormulario">
+
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <label for="nombre">Nombre completo (text):</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana García" required>
+
+          <label for="correo">Correo electrónico (email):</label>
+          <input type="email" id="correo" name="correo" placeholder="Ej: ana@correo.com" required>
+
+          <label for="clave">Contraseña (password):</label>
+          <input type="password" id="clave" name="clave" placeholder="Mínimo 6 caracteres">
+
+          <label for="edad">Edad (number):</label>
+          <input type="number" id="edad" name="edad" min="10" max="100" placeholder="Ej: 20">
+
+          <label for="fecha">Fecha de nacimiento (date):</label>
+          <input type="date" id="fecha" name="fecha">
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferencias</legend>
+
+          <label>Nivel de HTML (radio):</label>
+          <div class="radio-group">
+            <label><input type="radio" name="nivel" value="basico"> Básico</label>
+            <label><input type="radio" name="nivel" value="intermedio"> Intermedio</label>
+            <label><input type="radio" name="nivel" value="avanzado"> Avanzado</label>
+          </div>
+
+          <label>Temas de interés (checkbox):</label>
+          <div class="check-group">
+            <label><input type="checkbox" name="temas" value="html"> HTML</label>
+            <label><input type="checkbox" name="temas" value="css"> CSS</label>
+            <label><input type="checkbox" name="temas" value="js"> JavaScript</label>
+          </div>
+
+          <label for="pais">País (select):</label>
+          <select id="pais" name="pais">
+            <option value="">Selecciona tu país...</option>
+            <option value="co">Colombia</option>
+            <option value="mx">México</option>
+            <option value="ar">Argentina</option>
+            <option value="es">España</option>
+          </select>
+
+          <label for="foto">Foto de perfil (file):</label>
+          <input type="file" id="foto" name="foto" accept="image/*">
+        </fieldset>
+
+        <fieldset>
+          <legend>Mensaje</legend>
+          <label for="mensaje">¿Por qué quieres aprender HTML? (textarea):</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu respuesta..."></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar registro</button>
+        <button type="reset" style="background-color:#888; margin-left:10px">Limpiar</button>
+
+      </form>
+
+      <div id="respuesta"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Blog de Etiquetas HTML — Actividad 3</p>
+  </footer>
+
+  <script>
+    document.getElementById('miFormulario').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nombre = document.getElementById('nombre').value.trim();
+      var correo = document.getElementById('correo').value.trim();
+      var respuesta = document.getElementById('respuesta');
+
+      if (nombre === '' || correo === '') {
+        respuesta.style.display = 'block';
+        respuesta.style.backgroundColor = '#fdecea';
+        respuesta.style.border = '1px solid #e74c3c';
+        respuesta.style.color = '#c0392b';
+        respuesta.style.padding = '10px';
+        respuesta.style.borderRadius = '4px';
+        respuesta.innerText = ' Por favor completa el nombre y el correo.';
+      } else {
+        respuesta.style.display = 'block';
+        respuesta.style.backgroundColor = '#eafaf1';
+        respuesta.style.border = '1px solid #27ae60';
+        respuesta.style.color = '#1e8449';
+        respuesta.style.padding = '10px';
+        respuesta.style.borderRadius = '4px';
+        respuesta.innerText = ' ¡Registro enviado! Bienvenido, ' + nombre + '.';
+        this.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
