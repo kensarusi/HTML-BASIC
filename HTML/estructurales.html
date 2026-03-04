@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Etiquetas Estructurales</title>
+  <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Blog de Etiquetas HTML</h1>
+    <p>Aprende las etiquetas más importantes organizadas por categorías</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="estructurales.html">Estructurales</a>
+    <a href="texto.html">Texto</a>
+    <a href="listas.html">Listas</a>
+    <a href="formularios.html">Formularios</a>
+    <a href="tablas.html">Tablas</a>
+    <a href="multimedia.html">Multimedia</a>
+  </nav>
+
+  <main>
+
+    <aside>
+      <h3> En esta página</h3>
+      <p>Aprenderás las etiquetas que forman el esqueleto semántico de una página web.</p>
+    </aside>
+
+    <section>
+      <h2> Etiquetas Estructurales</h2>
+      <p>Le dan estructura semántica a la página. El navegador y los buscadores las usan para entender cómo está organizado el contenido.</p>
+
+      <article>
+        <h4>&lt;header&gt;</h4>
+        <p><strong>¿Qué es?</strong> La cabecera de la página. Normalmente tiene el título y el menú de navegación.</p>
+        <pre>&lt;header&gt;
+  &lt;h1&gt;Viva C#&lt;/h1&gt;
+&lt;/header&gt;</pre>
+        <div class="tip"><strong> Buena práctica:</strong> No confundir con &lt;head&gt;. El &lt;header&gt; sí se ve en la página.</div>
+      </article>
+
+      <article>
+        <h4>&lt;nav&gt;</h4>
+        <p><strong>¿Qué es?</strong> Contiene los enlaces de navegación del sitio.</p>
+        <pre>&lt;nav&gt;
+  &lt;a href="index.html"&gt;Inicio&lt;/a&gt;
+  &lt;a href="contacto.html"&gt;Contacto&lt;/a&gt;
+&lt;/nav&gt;</pre>
+        <div class="tip"><strong> Buena práctica:</strong> Úsala solo para el menú principal, no para todos los enlaces de la página.</div>
+      </article>
+
+      <article>
+        <h4>&lt;main&gt;</h4>
+        <p><strong>¿Qué es?</strong> Contiene el contenido principal de la página. Solo debe haber uno por página.</p>
+        <pre>&lt;main&gt;
+  &lt;h2&gt;Bienvenido&lt;/h2&gt;
+  &lt;p&gt;Aquí va todo lo que consideremos principal.&lt;/p&gt;
+&lt;/main&gt;</pre>
+        <div class="tip"><strong> Buena práctica:</strong> No pongas la barra de navegación ni el pie de página dentro de &lt;main&gt;.</div>
+      </article>
+
+      <article>
+        <h4>&lt;section&gt;</h4>
+        <p><strong>¿Qué es?</strong> Agrupa contenido relacionado dentro de la página, como un capítulo o una sección temática.</p>
+        <pre>&lt;section&gt;
+  &lt;h2&gt;Sobre nosotros&lt;/h2&gt;
+  &lt;p&gt;Arriba la 56.&lt;/p&gt;
+&lt;/section&gt;</pre>
+        <div class="tip"><strong> Buena práctica:</strong> Cada &lt;section&gt; debería tener un título (&lt;h2&gt;, &lt;h3&gt;, etc.).</div>
+      </article>
+
+      <article>
+        <h4>&lt;article&gt;</h4>
+        <p><strong>¿Qué es?</strong> Representa contenido independiente como una entrada de blog, noticia o comentario.</p>
+        <pre>&lt;article&gt;
+  &lt;h3&gt;Etiqueta &lt;p&gt;&lt;/h3&gt;
+  &lt;p&gt;Tres tristes tigres.&lt;/p&gt;
+&lt;/article&gt;</pre>
+        <div class="tip"><strong> Buena práctica:</strong> Si el contenido tiene sentido por sí solo fuera de la página, probablemente es un &lt;article&gt;.</div>
+      </article>
+
+      <article>
+        <h4>&lt;aside&gt;</h4>
+        <p><strong>¿Qué es?</strong> Contenido secundario relacionado con el contenido principal, como un consejo o dato extra.</p>
+        <pre>&lt;aside&gt;
+  &lt;p&gt; Dato curioso: Maradona consumia talco.&lt;/p&gt;
+&lt;/aside&gt;</pre>
+        <div class="tip"><strong> Buena práctica:</strong> Úsalo para información complementaria, no para el contenido principal.</div>
+      </article>
+
+      <article>
+        <h4>&lt;footer&gt;</h4>
+        <p><strong>¿Qué es?</strong> El pie de página. Contiene información de contacto, créditos o enlaces legales.</p>
+        <pre>&lt;footer&gt;
+  &lt;p&gt;&amp;todos los derechos reservados a Arvol y ken's&lt;/p&gt;
+&lt;/footer&gt;</pre>
+        <div class="tip"><strong> Buena práctica:</strong> Puede usarse también dentro de un &lt;article&gt; para indicar el autor o la fecha.</div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Blog de Etiquetas HTML — Actividad 3</p>
+  </footer>
+
+</body>
+</html>
