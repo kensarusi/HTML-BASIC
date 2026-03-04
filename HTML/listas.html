@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Listas</title>
+  <link rel="stylesheet" href="./Style/style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Blog de Etiquetas HTML</h1>
+    <p>Aprende las etiquetas más importantes organizadas por categorías</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="estructurales.html">Estructurales</a>
+    <a href="texto.html">Texto</a>
+    <a href="listas.html">Listas</a>
+    <a href="formularios.html">Formularios</a>
+    <a href="tablas.html">Tablas</a>
+    <a href="multimedia.html">Multimedia</a>
+  </nav>
+
+  <main>
+
+    <aside>
+      <h3> En esta página</h3>
+      <p>Aprenderás a organizar información en listas con viñetas, números o definiciones.</p>
+    </aside>
+
+    <section>
+      <h2> Listas</h2>
+      <p>Las listas sirven para organizar información como una serie de elementos.</p>
+
+      <article>
+        <h4>&lt;ul&gt; y &lt;li&gt; — Lista sin orden (viñetas)</h4>
+        <p><strong>¿Qué es?</strong> Lista con viñetas. Se usa cuando el orden no importa. Cada elemento va dentro de
+          &lt;li&gt;.</p>
+        <pre>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        <div class="demo">
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="tip"><strong> Buena práctica:</strong> Solo puede tener &lt;li&gt; como hijos directos. Úsala cuando
+          el orden no importa.</div>
+      </article>
+
+      <article>
+        <h4>&lt;ol&gt; y &lt;li&gt; — Lista ordenada (números)</h4>
+        <p><strong>¿Qué es?</strong> Lista numerada. Se usa cuando el orden sí importa, como pasos de un proceso.</p>
+        <pre>&lt;ol&gt;
+  &lt;li&gt;Crear el archivo .html&lt;/li&gt;
+  &lt;li&gt;Escribir el código&lt;/li&gt;
+  &lt;li&gt;Guardar el archivo&lt;/li&gt;
+  &lt;li&gt;Abrir en el navegador&lt;/li&gt;
+&lt;/ol&gt;</pre>
+        <div class="demo">
+          <ol>
+            <li>Crear el archivo .html</li>
+            <li>Escribir el código</li>
+            <li>Guardar el archivo</li>
+            <li>Abrir en el navegador</li>
+          </ol>
+        </div>
+        <div class="tip"><strong> Buena práctica:</strong> Úsala para instrucciones, recetas o pasos donde el orden es
+          importante.</div>
+      </article>
+
+      <article>
+        <h4>&lt;dl&gt;, &lt;dt&gt; y &lt;dd&gt; — Lista de definición</h4>
+        <p><strong>¿Qué es?</strong> Lista de términos con su descripción.</p>
+        <ul>
+          <li><strong>&lt;dl&gt;</strong>: contenedor de la lista de definición.</li>
+          <li><strong>&lt;dt&gt;</strong>: el término (definition term).</li>
+          <li><strong>&lt;dd&gt;</strong>: la descripción del término (definition description).</li>
+        </ul>
+        <pre>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Lenguaje para la creación de páginas web.&lt;/dd&gt;
+
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Lenguaje para dar estilos a páginas web.&lt;/dd&gt;
+
+  &lt;dt&gt;JavaScript&lt;/dt&gt;
+  &lt;dd&gt;Lenguaje de programación para páginas web interactivas.&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+        <div class="demo">
+          <dl>
+            <dt><strong>HTML</strong></dt>
+            <dd>Lenguaje para la creación de páginas web.</dd>
+            <dt><strong>CSS</strong></dt>
+            <dd>Lenguaje para dar estilos a páginas web.</dd>
+            <dt><strong>JavaScript</strong></dt>
+            <dd>Lenguaje de programación para páginas web interactivas.</dd>
+          </dl>
+        </div>
+        <div class="tip"><strong> Buena práctica:</strong> Ideal para glosarios, diccionarios o pares de
+          pregunta-respuesta.</div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Blog de Etiquetas HTML — Actividad 3</p>
+  </footer>
+
+</body>
+
+</html>
